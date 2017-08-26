@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Core_Data_TODO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o2-SW-Rfn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="UUw-Sa-yNF">
+                                        <connections>
+                                            <action selector="AddRecord:" destination="BYZ-38-t0r" id="ULO-mO-ZvD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-5C-Hmw">
+                                <rect key="frame" x="16" y="69" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CFV-wh-D35"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3J-BX-xbi">
+                                <rect key="frame" x="16" y="124" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qh5-fn-CvR"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0I-n3-7zI">
+                                <rect key="frame" x="16" y="179" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JOG-eD-k3h"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krh-Pk-Y2M">
+                                <rect key="frame" x="16" y="234" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="A5j-ik-iDI"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Salary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyY-Nx-f13">
+                                <rect key="frame" x="16" y="289" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zcR-xz-s3R"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686269999999" green="0.70980392160000005" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7o2-SW-Rfn" secondAttribute="trailing" id="C7w-kv-ytL"/>
+                            <constraint firstItem="SyY-Nx-f13" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FC4-X7-4vb"/>
+                            <constraint firstItem="N0I-n3-7zI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GNW-5p-3to"/>
+                            <constraint firstItem="SyY-Nx-f13" firstAttribute="top" secondItem="krh-Pk-Y2M" secondAttribute="bottom" constant="25" id="Hhk-XS-4O8"/>
+                            <constraint firstItem="krh-Pk-Y2M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JOF-No-WQl"/>
+                            <constraint firstItem="7o2-SW-Rfn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Og5-UI-R9I"/>
+                            <constraint firstItem="Qf9-5C-Hmw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QAe-mF-sjp"/>
+                            <constraint firstItem="Qf9-5C-Hmw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SSB-pQ-bSK"/>
+                            <constraint firstItem="N0I-n3-7zI" firstAttribute="top" secondItem="n3J-BX-xbi" secondAttribute="bottom" constant="25" id="SSy-Zf-b6w"/>
+                            <constraint firstItem="krh-Pk-Y2M" firstAttribute="top" secondItem="N0I-n3-7zI" secondAttribute="bottom" constant="25" id="UR3-3R-WfH"/>
+                            <constraint firstItem="n3J-BX-xbi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Vyw-f9-qeW"/>
+                            <constraint firstItem="7o2-SW-Rfn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="akg-1V-4c7"/>
+                            <constraint firstItem="Qf9-5C-Hmw" firstAttribute="top" secondItem="7o2-SW-Rfn" secondAttribute="bottom" constant="25" id="amF-hP-PRi"/>
+                            <constraint firstItem="n3J-BX-xbi" firstAttribute="top" secondItem="Qf9-5C-Hmw" secondAttribute="bottom" constant="25" id="lbR-7Z-9Zp"/>
+                            <constraint firstItem="N0I-n3-7zI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ni2-cR-1Nb"/>
+                            <constraint firstItem="SyY-Nx-f13" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wsB-fh-2FN"/>
+                            <constraint firstItem="krh-Pk-Y2M" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xU9-zX-48v"/>
+                            <constraint firstItem="n3J-BX-xbi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="z4G-rw-bKa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtEmpAddress" destination="krh-Pk-Y2M" id="4oo-a9-mpO"/>
+                        <outlet property="txtEmpName" destination="n3J-BX-xbi" id="BVw-au-AS0"/>
+                        <outlet property="txtEmpRole" destination="N0I-n3-7zI" id="0SJ-wq-Dx8"/>
+                        <outlet property="txtEmpSalary" destination="SyY-Nx-f13" id="1d5-AF-5kN"/>
+                        <outlet property="txtEmpld" destination="Qf9-5C-Hmw" id="zJ5-Xf-oqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.375" y="33.802816901408448"/>
+        </scene>
+    </scenes>
+</document>
